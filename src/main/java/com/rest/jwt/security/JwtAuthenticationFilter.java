@@ -1,4 +1,4 @@
-package com.rest.jwt.configs;
+package com.rest.jwt.security;
 
 import com.auth0.jwt.JWT;
 import com.fasterxml.jackson.core.JsonParseException;

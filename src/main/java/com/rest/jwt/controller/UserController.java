@@ -1,7 +1,7 @@
 package com.rest.jwt.controller;
 
 import com.rest.jwt.model.ApplicationUser;
-import com.rest.jwt.repository.ApplicationUserRepository;
+import com.rest.jwt.model.ApplicationUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,11 +16,11 @@ public class UserController {
     private ApplicationUserRepository applicationUserRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-//    public UserController(ApplicationUserRepository applicationUserRepository,
-//                          BCryptPasswordEncoder bCryptPasswordEncoder) {
-//        this.applicationUserRepository = applicationUserRepository;
-//        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-//    }
+    public UserController(ApplicationUserRepository applicationUserRepository,
+                          BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.applicationUserRepository = applicationUserRepository;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
 
     @PostMapping("/sign-up")
     public void signUp(@RequestBody ApplicationUser user) {
