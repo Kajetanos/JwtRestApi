@@ -13,23 +13,19 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-//@SpringBootApplication(exclude={
-//		DataSourceAutoConfiguration.class,
-//		DataSourceTransactionManagerAutoConfiguration.class})
-//@EnableJpaRepositories
-//@EnableAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
-//@SpringBootApplication
-@SpringBootApplication
+
+//@ComponentScan(basePackages = {"com.rest.jwt"})
+//@EntityScan("com.rest.jwt.model")
+//@EnableJpaRepositories(/*"com.rest.jwt.model"*/)
 @EnableAutoConfiguration(exclude = { ErrorMvcAutoConfiguration.class })
-@ComponentScan(basePackages = {"com.rest.jwt"})
-@EntityScan("com.rest.jwt.model")
-@EnableJpaRepositories("com.rest.jwt.model")
+@SpringBootApplication
 public class JwtApplication {
 
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(JwtApplication.class, args);
 	}
