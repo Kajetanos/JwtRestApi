@@ -1,5 +1,7 @@
 package com.rest.jwt.model;
 
+import com.rest.jwt.model.entity.ApplicationUser;
+import com.rest.jwt.model.repository.ApplicationUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

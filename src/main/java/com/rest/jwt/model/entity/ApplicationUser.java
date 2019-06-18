@@ -1,4 +1,4 @@
-package com.rest.jwt.model;
+package com.rest.jwt.model.entity;
 
 import javax.persistence.*;
 

@@ -1,8 +1,7 @@
 package com.rest.jwt.controller;
 
-import com.rest.jwt.model.ApplicationUser;
-import com.rest.jwt.model.ApplicationUserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.rest.jwt.model.entity.ApplicationUser;
+import com.rest.jwt.model.repository.ApplicationUserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

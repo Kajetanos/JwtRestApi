@@ -1,6 +1,7 @@
-package com.rest.jwt.model;
+package com.rest.jwt.model.repository;
 
-//import com.rest.jwt.model.ApplicationUser;
+//import com.rest.jwt.model.entity.ApplicationUser;
+import com.rest.jwt.model.entity.ApplicationUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
